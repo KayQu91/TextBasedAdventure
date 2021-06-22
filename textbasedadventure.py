@@ -45,16 +45,16 @@ else:
 
 print(f"So, {user_name}. We need your help finding the Treasure.")
 
-user_weapon = input(
-    "But first pick up the weapon of your choice! Type 'sword' or 'hammer': ").lower
+while False:
+    user_weapon = input(
+        "But first pick up the weapon of your choice! Type 'sword' or 'hammer': ").lower()
+    if user_weapon == "sword" or user_weapon == "hammer":
+        user_dmg += 1
+    else:
+        print("Please pick a weapon to start!")
+    print(
+        f"Great, you picked {user_weapon}. Now, it´s time to start your adventure!")
 
-if user_weapon == "sword" or user_weapon == "hammer":
-    user_dmg += 1
-else:
-    quit()
-
-print(
-    f"Great, you picked {user_weapon}. Now, it´s time to start your adventure!")
 user_choice = input(
     "After you traveled for a few hours you meet a old looking person. Do you want to talk to the stranger (y/n)? ").lower()
 if user_choice == "y":
@@ -65,3 +65,5 @@ if user_choice == "y":
         quit()
     else:
         print("The old man seems angry and tries to attack you!")
+if user_choice == "n":
+    print("The old man seems angry and tries to attack you!")

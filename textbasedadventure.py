@@ -40,10 +40,28 @@ start_game = input(
     "Welcome hero! Do you want to start an adventure? Type 'yes' to start or 'quit' to quit: ").lower()
 if start_game == "yes":
     user_name = input("Great! Let´s start with your name: ")
-
 else:
     quit()
 
 print(f"So, {user_name}. We need your help finding the Treasure.")
+
 user_weapon = input(
     "But first pick up the weapon of your choice! Type 'sword' or 'hammer': ").lower
+
+if user_weapon == "sword" or user_weapon == "hammer":
+    user_dmg += 1
+else:
+    quit()
+
+print(
+    f"Great, you picked {user_weapon}. Now, it´s time to start your adventure!")
+user_choice = input(
+    "After you traveled for a few hours you meet a old looking person. Do you want to talk to the stranger (y/n)? ").lower()
+if user_choice == "y":
+    user_choice = print(
+        "Stranger: 'Hello young man. you look tired. Do you want to take a break (y/n)? ").lower()
+    if user_choice == "y":
+        print("The old man robbed you! You loose!")
+        quit()
+    else:
+        print("The old man seems angry and tries to attack you!")

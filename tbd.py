@@ -100,3 +100,6 @@ if user_choice == "y":
         print("Old woman: 'Good for you! The nights are dangerous around here! Take care for yourself, young man! If you change our mind you know where you can find me.")
 else:
     print("You walked past the old woman an keep searching for a nice place to spend the night.")
+
+
+# Keep Going until whatever happens!
